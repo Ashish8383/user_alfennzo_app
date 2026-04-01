@@ -1,29 +1,31 @@
 {
   "expo": {
-    "name": "qr_alfennzo",
-    "slug": "qr_alfennzo",
+    "name": "Alfennzo",
+    "slug": "alfennzo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "alfennzo",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FF8A00",
+      "resizeMode": "contain"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Scan QR codes to order food at your table"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FF8A00"
       },
-      "edgeToEdgeEnabled": true
+      "permissions": ["android.permission.CAMERA"]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "Scan QR codes to order food" }]
+    ]
   }
 }
