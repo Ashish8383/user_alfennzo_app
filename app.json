@@ -15,17 +15,32 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Scan QR codes to order food at your table"
-      }
+      },
+      "bundleIdentifier": "com.ashishson.alfennzo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FF8A00"
       },
-      "permissions": ["android.permission.CAMERA"]
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.ashishson.alfennzo"
     },
     "plugins": [
-      ["expo-camera", { "cameraPermission": "Scan QR codes to order food" }]
-    ]
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Scan QR codes to order food"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fc34cc23-d61d-457a-9f89-2aff8ad8dc8e"
+      }
+    }
   }
 }
